@@ -9,7 +9,7 @@ mkdir C:\Terraform
 Expand-Archive C:\Downloads\terraform_1.11.4_windows_amd64.zip -DestinationPath C:\Terraform
 # Add terraform executable location to Path variable
 $env:Path += ';C:\Terraform'
-terravorm -version
+terravorm version
 ```
 
 ## Using Chocolatey package manager
@@ -19,6 +19,6 @@ terravorm -version
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 # Install Terraform using Chocolatey
 choco install terraform -y
-terraform -version
+terraform version
 choco upgrade terraform
 ```
