@@ -2,7 +2,7 @@
 
 ## Direct download of executable from terraform.io
 
-```PoSH
+```PoSh
 # Download latest version of terraform from terraform.io
 # Extract archive
 mkdir C:\Terraform
@@ -12,9 +12,9 @@ $env:Path += ';C:\Terraform'
 terravorm -version
 ```
 
-## Usingh Chocolatey package manager
+## Using Chocolatey package manager
 
-```Posh
+```PoSh
 # Install Chocolatey from elevated PoSh window
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 # Install Terraform using Chocolatey
