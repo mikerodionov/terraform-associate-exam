@@ -16,10 +16,16 @@
     "workbench.sideBar.location": "right",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "[terraform]": {
-        "editor.formatOnSave": false, 
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true, 
         "editor.tabSize": 2
     },
+
+    "terraform.languageServer.enable": true,
+
     "[terraform-vars]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true,
         "editor.tabSize": 2
     }
 }
