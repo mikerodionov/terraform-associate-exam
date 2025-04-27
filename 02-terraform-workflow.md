@@ -3,7 +3,7 @@
 ## Create configuration file
 
 ```Bash
-mkdir -p terraform-labs/02-terraform-asics/02-hol-workflow
+mkdir -p terraform-labs/02-terraform-basics/02-hol-workflow
 code .
 touch main.tf
 ```
