@@ -73,7 +73,7 @@ resource "local_file" "my_file3" {
 }
 ```
 
-## Run terraform init / apply
+## terraform init / apply
 
 **terraform init**
 -	It can infer from resource block type “local_file” required provider (resource block goes “provider” “resource _name” and it will lookup for it in the highest priority namespace which is hashicorp (hashicorp/local) and will download it under .terraform hidden directory
@@ -85,16 +85,22 @@ resource "local_file" "my_file3" {
 ## Other Terraform workflow commands
 
 ```Bash
+# Init - in the very beginning and on provider/module or version constraints changes
+terraform init
+# Plan
 # -out parameter can be used with or without equals sign to save plan into a file
 terraform plan -out tfplan
 terraform plan -out=tfplan
 terraform show tfplan # shows saved plan in human-readable form
 terraform apply tfplan
 terraform apply -auto-approve
+terraform show # shows contents of the state file in human-readable form
+# Destroy
 terraform apply -destroy
 terraform destroy -auto-approve
+# Format
 terraform fmt # apply style guidelines
 terraform fmt -check # returns filename(s) of a file(s) where style needs to be corrected and non-0 exit code when such files are present in working directory
+# Validate
 terraform validate # tries to identify syntax errors
-terraform init
 ```
