@@ -85,7 +85,9 @@ resource "local_file" "my_file3" {
 ## Other Terraform workflow commands
 
 ```Bash
+# -out parameter can be used with or without equals sign
 terraform plan -out tfplan
+terraform plan -out=tfplan
 terraform apply tfplan
 terraform apply -destroy
 terraform show # shows state info in human-readable form
