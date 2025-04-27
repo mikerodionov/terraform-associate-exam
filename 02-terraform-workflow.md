@@ -85,13 +85,13 @@ resource "local_file" "my_file3" {
 ## Other Terraform workflow commands
 
 ```Bash
-# -out parameter can be used with or without equals sign
+# -out parameter can be used with or without equals sign to save plan into a file
 terraform plan -out tfplan
 terraform plan -out=tfplan
+terraform show tfplan # shows saved plan in human-readable form
 terraform apply tfplan
-terraform apply -destroy
-terraform show # shows state info in human-readable form
 terraform apply -auto-approve
+terraform apply -destroy
 terraform destroy -auto-approve
 terraform fmt # apply style guidelines
 terraform fmt -check # returns filename(s) of a file(s) where style needs to be corrected and non-0 exit code when such files are present in working directory
